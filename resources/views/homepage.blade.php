@@ -15,7 +15,7 @@
 
 <div class="row align-items-md-stretch">
     <div class="col-md-6">
-    <div class="h-100 p-5 text-white bg-dark rounded-3">
+    <div class="h-100 p-5 text-white bg-primary rounded-3">
         <h2>Ingin melihat catatan?</h2>
         <p>Click tombol dibawah ini :D</p>
         <a href="/catatan" class="btn btn-outline-light" type="button">Lihat</a>
