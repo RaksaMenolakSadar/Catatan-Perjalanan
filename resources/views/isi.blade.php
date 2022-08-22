@@ -34,6 +34,7 @@
         
         <button type="submit" class="btn btn-outline-primary ">Tambah catatan</button>
     </form>
+    <a href="/" class="btn btn-outline-dark mt-2"><- Kembali ke home</a>
 </div>
 
 

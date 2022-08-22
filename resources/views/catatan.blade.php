@@ -12,6 +12,7 @@
 @endif
 
 <div class="table-responsive col-lg-8">
+  <a href="/" class="btn btn-outline-success mb-2">Kembali ke halaman home</a>
   <a href="/isi" class="btn btn-outline-primary mb-2">Tambah catatan</a>
     <table class="table table-striped table-sm">
       <thead class="table-light border-dark">

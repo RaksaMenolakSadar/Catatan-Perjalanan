@@ -10,10 +10,10 @@
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('catatan perjalanan') ? 'active' : '' }}" href="/catatan">Catatan Perjalanan</a>
+                    <a class="nav-link {{ Request::is('catatan') ? 'active' : '' }}" href="/catatan">Catatan Perjalanan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('isi data') ? 'active' : '' }}" href="/isi">Isi Data</a>
+                    <a class="nav-link {{ Request::is('isi') ? 'active' : '' }}" href="/isi">Isi Data</a>
                 </li>
             </ul>
             
