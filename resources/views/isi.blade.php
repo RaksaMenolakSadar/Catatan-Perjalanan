@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-lg-5">
-    <form method="post" action="/dashboard/users">
+    <form method="post">
     @csrf
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal</label>
