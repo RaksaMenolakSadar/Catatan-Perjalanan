@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="/">Catatan Perjalanan</a>
+        <a class="navbar-brand" href="/home">Catatan Perjalanan</a>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ Request::is('/home') ? 'active' : '' }}" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('catatan') ? 'active' : '' }}" href="/catatan">Catatan Perjalanan</a>

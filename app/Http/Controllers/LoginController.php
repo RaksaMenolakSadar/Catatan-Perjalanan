@@ -22,12 +22,16 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt($credentials)){
-            $request->session()->regenerate();
             
-            return redirect()->intended('/homepage');
+            $request->session()->regenerate();
+
+            return redirect()->intended('/home');
         }
 
-        return back()->with('loginError', 'login gagal!');
+
+        else {
+            return back()->with('loginError', 'login gagal!');
+        }
     }
 
     public function logout(Request $request)

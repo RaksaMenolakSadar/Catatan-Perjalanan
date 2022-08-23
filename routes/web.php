@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatatanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -17,7 +18,7 @@ use App\Http\Controllers\RegisterController;
 
 // route view
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('homepage', [
         'title' =>'homepage'
     ]);
@@ -48,3 +49,5 @@ Route::post('/login', [LoginController::class, 'login']);
 // route logout
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::resource('/catatan', CatatanController::class);
