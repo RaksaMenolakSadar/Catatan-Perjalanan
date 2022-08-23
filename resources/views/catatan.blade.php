@@ -26,14 +26,7 @@
       </thead>
 
       <tbody>
-      @foreach ($data as $catatan)
-      <tr>
-      <td>{{ $loop->iteration }}</td>
-      <td>{{ $catatan->tanggal }}</td>
-      <td>{{ $catatan->jam }}</td>
-      <td>{{ $catatan->lokasi }}</td>        
-      <td>{{ $catatan->suhu }}</td>
-      </tr>
+      <!-- dihapus sementara -->
       </tbody>
     </table>
 </div>

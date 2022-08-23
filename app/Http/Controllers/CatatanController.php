@@ -14,6 +14,7 @@ class CatatanController extends Controller
      */
     public function index()
     {
+        return Catatan::where('nama', auth()->user()->nama)->get();
         return view('catatan', [
             'data' => Catatan::all()
         ]);
