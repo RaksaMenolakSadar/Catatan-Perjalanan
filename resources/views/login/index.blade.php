@@ -11,6 +11,13 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     @endif
+
+    @if(session()->has('loginError'))
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ session('loginError') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    @endif
     
 <main class="form-signin w-100 m-auto">
   <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
@@ -18,14 +25,14 @@
     @csrf
     
     <div class="form-floating">
-      <input type="text" name="NIK" class="form-control rounded-top" id="NIK" placeholder="12345" required>
-      <label for="NIK">NIK</label>
-    </div>
+          <input type="text" name="nama" class="form-control rounded-top" id="nama" placeholder="Rakhsha Nabil" required>
+          <label for="nama">Nama Lengkap</label>
+        </div>
 
     <div class="form-floating">
-      <input type="text" name="nama" class="form-control rounded-top" id="nama" placeholder="Rakhsha Nabil">
-      <label for="nama">Nama Lengkap</label>
-    </div>
+          <input type="text" name="NIK" class="form-control rounded-bottom" id="NIK" placeholder="12345" required>
+          <label for="NIK">NIK</label>
+        </div>
     
         <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
       </form>
