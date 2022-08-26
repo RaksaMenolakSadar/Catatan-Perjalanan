@@ -23,7 +23,7 @@ class RegisterController extends Controller
         ]);
 
 
-        $validatedData['NIK'] = bcrypt($validatedData['NIK']);
+        // $validatedData['NIK'] = bcrypt($validatedData['NIK']);
         User::create($validatedData);
 
         return redirect('login')->with('success', 'Registrasi berhasil, silahkan login!');

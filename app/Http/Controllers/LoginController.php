@@ -21,7 +21,8 @@ class LoginController extends Controller
             'NIK' => ['required']
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)) 
+        {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
