@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="/home">Catatan Perjalanan</a>
+        <a class="navbar-brand" href="/">Catatan Perjalanan</a>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="/home">Home</a>
+                    <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('catatan') ? 'active' : '' }}" href="/catatan">Catatan Perjalanan</a>
@@ -19,7 +19,7 @@
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Welcome, {{ auth()->user()->nama_lengkap() }}
+                        Welcome, {{ auth()->users()->nama() }}
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -28,16 +28,14 @@
                                 <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
                             </form>
                         </li>
-            </ul>
-        </li>
+                    </ul>
+                </li>
                 @else
                 <li class="nav-item">
                     <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>  Login</a>
                 </li>
                 @endauth
             </ul>
-
-            
         </div>
     </div>
 </nav>

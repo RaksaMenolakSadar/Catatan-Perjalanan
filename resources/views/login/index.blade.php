@@ -25,12 +25,12 @@
     @csrf
     
     <div class="form-floating">
-          <input type="text" name="nama" class="form-control rounded-top" id="nama" placeholder="Rakhsha Nabil" required>
+          <input type="text" name="nama" class="form-control" id="nama" placeholder="Rakhsha Nabil" required>
           <label for="nama">Nama Lengkap</label>
         </div>
 
     <div class="form-floating">
-          <input type="text" name="NIK" class="form-control rounded-bottom" id="NIK" placeholder="12345" required>
+          <input type="text" name="NIK" class="form-control" id="NIK" placeholder="12345" required>
           <label for="NIK">NIK</label>
         </div>
     

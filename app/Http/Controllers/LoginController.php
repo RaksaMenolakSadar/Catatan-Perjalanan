@@ -14,23 +14,21 @@ class LoginController extends Controller
         ]);
     }
 
-    public function login(Request $request)
+    public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'nama' => 'required',
-            'NIK' => 'required'
+            'nama' => ['required'],
+            'NIK' => ['required']
         ]);
 
-        if(Auth::attempt($credentials)){
-            
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
 
-
-        else {
-            return back()->with('loginError', 'login gagal!');
+        else 
+        {
+            return back()->with('loginError', 'Login gagal!');
         }
     }
 
@@ -40,6 +38,6 @@ class LoginController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('login.index');
     }
 }
