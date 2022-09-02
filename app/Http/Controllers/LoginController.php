@@ -26,8 +26,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-
-        else 
+        else
         {
             return back()->with('loginError', 'Login gagal!');
         }
@@ -36,7 +35,6 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('login.index');

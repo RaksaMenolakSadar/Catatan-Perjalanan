@@ -25,8 +25,8 @@
     @csrf
     
     <div class="form-floating">
-          <input type="text" name="nama" class="form-control" id="nama" placeholder="Rakhsha Nabil" required>
-          <label for="nama">Nama Lengkap</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Rakhsha Nabil" required>
+          <label for="name">Nama Lengkap</label>
         </div>
 
     <div class="form-floating">
