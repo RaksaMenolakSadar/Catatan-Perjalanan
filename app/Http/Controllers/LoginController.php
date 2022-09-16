@@ -20,12 +20,13 @@ class LoginController extends Controller
             'nama' => ['required'],
             'NIK' => ['required']
         ]);
-
+        
         if (Auth::attempt($credentials)) 
         {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect('/');
         }
+
         else
         {
             return back()->with('loginError', 'Login gagal!');

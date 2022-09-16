@@ -21,12 +21,12 @@
     
 <main class="form-signin w-100 m-auto">
   <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
-    <form action="/login" method="post">
+    <form action="{{ route('login') }}" method="post">
     @csrf
     
     <div class="form-floating">
-          <input type="text" name="name" class="form-control" id="name" placeholder="Rakhsha Nabil" required>
-          <label for="name">Nama Lengkap</label>
+          <input type="text" name="nama" class="form-control" id="nama" placeholder="Rakhsha Nabil" required>
+          <label for="nama">Nama Lengkap</label>
         </div>
 
     <div class="form-floating">
