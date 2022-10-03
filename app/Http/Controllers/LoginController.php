@@ -14,12 +14,14 @@ class LoginController extends Controller
         ]);
     }
 
-    public function authenticate(Request $request)
+    function authenticate(Request $request)
     {
-        $credentials = $request->validate([
+        $request->validate([
             'nama' => ['required'],
             'NIK' => ['required']
         ]);
+
+        $credentials = $request->only('nama','NIK');
         
         if (Auth::attempt($credentials)) 
         {
